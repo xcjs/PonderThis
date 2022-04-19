@@ -32,7 +32,7 @@
             get { return _correctAnswer; }
         }
 
-        public string? AnswerDescription =
+        public string? AnswerDescription { get; } =
             "There are two solutions to get N=57: S1={1,3,4,6,7,9} " + 
             "S2={2,5,7,8,9,13} and S1={1,5,6,7,8,13} S2={2,3,4,6,7,9}." +
             $"{Environment.NewLine}{Environment.NewLine}" +
