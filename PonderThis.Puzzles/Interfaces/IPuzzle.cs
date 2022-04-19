@@ -6,6 +6,7 @@ public interface IPuzzle
     string Description { get; }
     string? ComputedAnswer { get; }
     string? CorrectAnswer { get; }
+    string? AnswerDescription { get; }
 
     void Solve();
 }

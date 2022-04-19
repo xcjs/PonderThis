@@ -32,6 +32,14 @@
             get { return _correctAnswer; }
         }
 
+        public string? AnswerDescription =
+            "There are two solutions to get N=57: S1={1,3,4,6,7,9} " + 
+            "S2={2,5,7,8,9,13} and S1={1,5,6,7,8,13} S2={2,3,4,6,7,9}." +
+            $"{Environment.NewLine}{Environment.NewLine}" +
+            "A larger N can be achieved by 'cheating' and using non-integer" +
+            $"numbers.For example,{Environment.NewLine}" +
+            "S1={ 1,1.5,2,3,4,4.5} S2={2,12,13,14,15,16.5}.";
+
         private string? _computedAnswer = null;
         private string? _correctAnswer = null;
 

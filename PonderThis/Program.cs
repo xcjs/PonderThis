@@ -35,6 +35,12 @@ public static class Program
             puzzle.Solve();
             Console.WriteLine($"Computed answer: {puzzle.ComputedAnswer}");
             Console.WriteLine($"Correct answer:  {puzzle.CorrectAnswer}{Environment.NewLine}");
+
+            if(puzzle.AnswerDescription != null)
+            {
+                Console.WriteLine($"Additional context for this answer is provided:{Environment.NewLine}{Environment.NewLine}");
+                Console.WriteLine($"{puzzle.AnswerDescription}{Environment.NewLine}");
+            }
         }
     }
 }
