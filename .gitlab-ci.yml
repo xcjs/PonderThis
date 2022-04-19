@@ -1,0 +1,26 @@
+stages:
+  - Build
+  - Test
+
+Build:
+  stage: Build
+  tags:
+    - dotnetcore
+    - linux
+    - shell
+  script:
+    - dotnet publish PonderThis/PonderThis.csproj -c Release
+  artifacts:
+    name: PonderThis
+    paths:
+      - PonderThis/bin/Release/net6.0/publish/
+    expire_in: 7 days
+
+Test:
+  stage: Test
+  tags:
+    - dotnetcore
+    - linux
+    - shell
+  script:
+    - dotnet test PonderThis.Tests/PonderThis.Tests.csproj
