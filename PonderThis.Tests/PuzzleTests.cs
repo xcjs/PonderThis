@@ -33,7 +33,7 @@ namespace PonderThis.Tests
 
             foreach (var puzzle in puzzles)
             {
-                Console.WriteLine($"Solving \"Ponder This\" released on {puzzle.PuzzleDate.ToString("yyyy-MM")}{Environment.NewLine}");
+                Console.WriteLine($"Solving \"Ponder This\" release for {puzzle.PuzzleDate.ToString("yyyy-MM")}{Environment.NewLine}");
                 Console.WriteLine($"{puzzle.Description}{Environment.NewLine}");
                 puzzle.Solve();
                 Assert.Equal(puzzle.CorrectAnswer, puzzle.ComputedAnswer);
